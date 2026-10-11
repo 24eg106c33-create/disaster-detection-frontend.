@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disaster Detection System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Disaster Detection System</h1>
+    <p>Monitor, report and track disasters</p>
+  </header>
+
+  <main>
+    <section class="dashboard">
+      <div class="card">
+        <h3>Active Disasters</h3>
+        <p id="count">0</p>
+      </div>
+      <div class="card">
+        <h3>Emergency Status</h3>
+        <p>Monitoring</p>
+      </div>
+    </section>
+
+    <section class="report">
+      <h2>Report a Disaster</h2>
+      <form id="disasterForm">
+        <label for="type">Disaster Type</label>
+        <select id="type" required>
+          <option value="">Select type</option>
+          <option>Flood</option>
+          <option>Earthquake</option>
+          <option>Fire</option>
+          <option>Cyclone</option>
+          <option>Landslide</option>
+        </select>
+
+        <label for="location">Location</label>
+        <input id="location" placeholder="Enter location" required>
+
+        <label for="severity">Severity</label>
+        <select id="severity" required>
+          <option>Low</option>
+          <option>Medium</option>
+          <option>High</option>
+          <option>Critical</option>
+        </select>
+
+        <label for="description">Description</label>
+        <textarea id="description"
+          placeholder="Describe the incident" required></textarea>
+
+        <button type="submit">Report Disaster</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Reported Disasters</h2>
+      <div id="reports"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
